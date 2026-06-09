@@ -5,8 +5,11 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// require("./sheduler");
+require("./src/utils/sheduler");
 require("./src/config/db");
+
+const discountRoutes = require("./src/routes/discountRoutes");
+app.use("/api", discountRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
