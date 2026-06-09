@@ -5,7 +5,8 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-require("./sheduler");
+// require("./sheduler");
+require("./src/config/db");
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
